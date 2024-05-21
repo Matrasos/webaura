@@ -42,20 +42,20 @@ const Header = () => {
         <div className={`header__burger ${isActive ? 'active' : ''}`} onClick={handleBurgerClick}>
           <span></span>
         </div>
-        <div className={`header__menu ${isActive ? 'active' : ''}`}>
-          <div className="header__menu-nav">
-            {links.map((link, index) => (
-              <Link className="header__menu-link" key={index} to={`${link.anchor}`}>
-                <span>{link.name}</span>
-                <div className="divider"></div>
-              </Link>
-            ))}
-          </div>
-          <div className="header__menu-info">
-            <Link to=''>150000, Петропавловск, улица Назарбаева 193, 1 этаж</Link>
-            <Link to=''>+7 (495) 930-45-56</Link>
-            <Link to=''>info@webaura.kz</Link>
-          </div>
+      </div>
+      <div className={`header__menu ${isActive ? 'active' : ''}`}>
+        <div className="header__menu-nav">
+          {links.map((link, index) => (
+            <Link className="header__menu-link" key={index} to={`${link.anchor}`}>
+              <span>{link.name}</span>
+              <div className="divider"></div>
+            </Link>
+          ))}
+        </div>
+        <div className="header__menu-info">
+          <Link to=''>150000, Петропавловск, улица Назарбаева 193, 1 этаж</Link>
+          <Link to=''>+7 (495) 930-45-56</Link>
+          <Link to=''>info@webaura.kz</Link>
         </div>
       </div>
     </header>

@@ -145,6 +145,8 @@
       position: absolute;
       right: 0;
       top: -100%;
+      opacity: 0;
+      visibility: hidden;
       background-color: $bg;
       z-index: 150;
       width: 100vw;
@@ -211,7 +213,23 @@
       }
 
       &.active {
+        visibility: visible;
         top: 0;
+        opacity: 1;
+      }
+    }
+  }
+
+  .hero {
+    margin-top: 270px;
+
+    * {
+      color: $white;
+    }
+
+    h1 {
+      span {
+        color: $blue;
       }
     }
   }

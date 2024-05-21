@@ -3,9 +3,9 @@ import Header from "./Header/Header";
 const Home = () => {
   return (
     <div className="home wrapper">
+      <Header />
       <div className="hero">
-        <Header />
-        <h1>web aura</h1>
+        <h1><span>web</span> aura</h1>
         <p>
           которые позволяют расти, зарабатывать и быть лидерами.
           <br />
