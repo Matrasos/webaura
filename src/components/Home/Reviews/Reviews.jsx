@@ -44,7 +44,7 @@ const Reviews = () => {
           <Swiper
             className='reviews__slider-swiper'
             modules={[Navigation, A11y]}
-            spaceBetween={100}
+            spaceBetween={0}
             loop={true}
             slidesPerView={1}
           >

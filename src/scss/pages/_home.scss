@@ -333,6 +333,10 @@
       @media screen and (max-width: 768px) {
         gap: 70px;
       }
+
+      @media screen and (max-width: 1024px) {
+        margin: 0;
+      }
     }
   }
 
@@ -780,15 +784,24 @@
     }
     &__quote {
       margin-top: 50px;
+
+      svg {
+        height: auto;
+        @media screen and (max-width: 1024px) {
+          width: 80px;
+        }
+        @media screen and (max-width: 768px) {
+          width: 60px;
+        }
+        @media screen and (max-width: 475px) {
+          width: 30px;
+        }
+      }
     }
     &__slider {
       max-width: 800px;
       margin: 0 auto;
       margin-top: 20px;
-
-      &-swiper {
-        width: 100%;
-      }
 
       &-btns {
         margin-top: 50px;
@@ -814,6 +827,27 @@
           border-radius: 50%;
           transition: 0.3s linear;
 
+          @media screen and (max-width: 997px) {
+            min-width: 50px;
+            min-height: 50px;
+          }
+
+          @media screen and (max-width: 768px) {
+            min-width: 50px;
+            min-height: 50px;
+          }
+
+          @media screen and (max-width: 475px) {
+            width: 30px;
+            height: 30px;
+            min-width: 30px;
+            min-height: 30px;
+          }
+
+          svg {
+            width: 60%;
+          }
+
           svg path {
             fill: $black;
           }
@@ -832,6 +866,13 @@
           height: 1px;
           background-color: $black;
           width: 200px;
+
+          @media screen and (max-width: 997px) {
+            width: 140px;
+          }
+          @media screen and (max-width: 580px) {
+            width: 90px;
+          }
         }
       }
 
@@ -841,21 +882,46 @@
         align-items: center;
         gap: 20px;
 
+        @media screen and (max-width: 768px) {
+          gap: 10px;
+        }
+
         img {
           width: 150px;
           height: 150px;
           border-radius: 50%;
           overflow: hidden;
+
+          @media screen and (max-width: 1024px) {
+            width: 120px;
+            height: 120px;
+          }
+          @media screen and (max-width: 768px) {
+            width: 100px;
+            height: 100px;
+          }
         }
 
         &-name {
           font-weight: 600;
           font-size: 24px;
+
+          @media screen and (max-width: 768px) {
+            font-size: 16px;
+          }
         }
+
         &-description {
           text-align: center;
           font-weight: 500;
           font-size: 24px;
+
+          @media screen and (max-width: 1024px) {
+            font-size: 20px;
+          }
+          @media screen and (max-width: 768px) {
+            font-size: 14px;
+          }
         }
       }
     }
