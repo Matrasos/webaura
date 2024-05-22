@@ -28,6 +28,7 @@ body.lock {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
 
     &-number {
       font-weight: 600;
@@ -39,10 +40,15 @@ body.lock {
       }
     }
     &-text {
+      text-align: center;
       text-transform: uppercase;
       font-weight: 700;
       font-size: 48px;
       color: $black;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 36px;
+      }
 
       @media screen and (max-width: 768px) {
         font-size: 20px;
