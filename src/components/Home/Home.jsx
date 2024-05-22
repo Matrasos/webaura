@@ -3,6 +3,7 @@ import Header from "./Header/Header";
 import Cases from "./Cases/Cases";
 import Services from "./Services/Services";
 import Team from "./Team/Team";
+import About from "./About/About";
 
 const Home = () => {
 
@@ -40,6 +41,7 @@ const Home = () => {
           <Cases />
           <Services />
           <Team />
+          <About />
         </div>
       </main>
     </div>
