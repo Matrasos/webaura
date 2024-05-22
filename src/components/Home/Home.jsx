@@ -4,6 +4,7 @@ import Cases from "./Cases/Cases";
 import Services from "./Services/Services";
 import Team from "./Team/Team";
 import About from "./About/About";
+import Reviews from "./Reviews/Reviews";
 
 const Home = () => {
 
@@ -42,6 +43,7 @@ const Home = () => {
           <Services />
           <Team />
           <About />
+          <Reviews />
         </div>
       </main>
     </div>

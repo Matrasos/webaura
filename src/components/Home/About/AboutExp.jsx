@@ -7,7 +7,7 @@ const AboutExp = () => {
   return (
     <div className="about__row-info">
       {expData.map((item, index) => (
-        <div>
+        <div key={index}>
           <h4>{item.number}</h4>
           <p>{item.description}</p>
         </div>
