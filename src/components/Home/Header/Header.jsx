@@ -14,6 +14,8 @@ const Header = () => {
 
   const handleBurgerClick = () => {
     setIsActive(!isActive);
+
+    document.querySelector('body').classList.toggle('lock')
   };
 
   return (
@@ -48,7 +50,7 @@ const Header = () => {
           {links.map((link, index) => (
             <Link className="header__menu-link" key={index} to={`${link.anchor}`}>
               <span>{link.name}</span>
-              <div className="divider"></div>
+              <div className="header__divider"></div>
             </Link>
           ))}
         </div>
