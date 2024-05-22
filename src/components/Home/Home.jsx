@@ -6,6 +6,7 @@ import Team from "./Team/Team";
 import About from "./About/About";
 import Reviews from "./Reviews/Reviews";
 import Technologies from "./Technologies/Technologies";
+import Blog from "./Blog/Blog";
 
 const Home = () => {
 
@@ -46,6 +47,7 @@ const Home = () => {
           <About />
           <Reviews />
           <Technologies />
+          <Blog />
         </div>
       </main>
     </div>
