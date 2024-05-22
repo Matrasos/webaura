@@ -1176,4 +1176,136 @@
       }
     }
   }
+
+  .footer {
+    padding-top: 50px;
+    * {
+      color: $white;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 48px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 32px;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 24px;
+      }
+      @media screen and (max-width: 425px) {
+        font-size: 16px;
+      }
+
+      span {
+        color: $blue;
+      }
+    }
+
+    &__info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+
+      @media screen and (max-width: 768px) {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      &-link {
+        line-height: normal;
+        font-weight: 500;
+        font-size: 24px;
+
+        @media screen and (max-width: 997px) {
+          font-size: 20px;
+        }
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+        }
+      }
+    }
+
+    &__form {
+      max-width: 997px;
+      padding: 100px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-left: auto;
+
+      @media screen and (max-width: 768px) {
+        padding: 70px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      &-field {
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid $white;
+        padding: 8px 0;
+        font-weight: 500;
+        font-size: 24px;
+        color: #d8d8d8;
+
+        @media screen and (max-width: 768px) {
+          font-size: 20px;
+        }
+        @media screen and (max-width: 475px) {
+          font-size: 16px;
+        }
+
+        &::placeholder {
+          color: #d8d8d8;
+        }
+
+        &-full {
+          grid-column: span 2;
+        }
+      }
+
+      &-btn {
+        border: none;
+        outline: none;
+        background-color: $blue;
+        border-radius: 30px;
+        padding: 12px 50px;
+        font-weight: 600;
+        font-size: 24px;
+        text-align: center;
+
+        @media screen and (max-width: 768px) {
+          font-size: 16px;
+        }
+        @media screen and (max-width: 475px) {
+          padding: 12px 0;
+        }
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        color: #666;
+
+        @media screen and (max-width: 768px) {
+          font-size: 14px;
+        }
+
+        span {
+          color: #666;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }
