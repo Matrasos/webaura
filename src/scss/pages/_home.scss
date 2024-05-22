@@ -489,7 +489,7 @@
       align-items: center;
       gap: 40px;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1200px) {
         align-items: normal;
         flex-direction: column;
         gap: 30px;
@@ -500,7 +500,7 @@
         flex: 1 1 40%;
         gap: 20px;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1200px) {
           order: 2;
         }
 
@@ -569,7 +569,7 @@
         justify-content: space-between;
         gap: 30px;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1200px) {
           order: 1;
         }
 
