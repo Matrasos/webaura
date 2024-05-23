@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Case = () => {
 
@@ -24,7 +24,12 @@ const Case = () => {
   const caseInfo = caseData[caseName];
 
   if (!caseInfo) {
-    return <div>Case not found</div>;
+    return (
+      <div className="cases__not-found">
+        <p className="cases__not-found__title">Такого кейса ещё нет :) </p>
+        <p className="cases__not-found__subtitle">По вопросам публикации пишите на почту <span><Link to=''>info@webaura.kz</Link></span></p>
+      </div>
+    );
   }
 
 
