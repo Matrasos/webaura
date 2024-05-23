@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
-import Home from './components/Home/Home'
 import './scss/index.scss'
+import Home from './components/Home/Home'
+import Case from 'components/Case/Case'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/cases/:caseName' element={<Case />} />
       </Routes>
     </>
   )
