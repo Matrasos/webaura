@@ -6,27 +6,27 @@ const Services = () => {
   const servicesData = [
     {
       name: "Разработка: превращаем вашу идею в реальность",
-      src: ""
+      src: "/services/develop"
     },
     {
       name: "Веб-дизайн: создаём интерфейс, которым пользуются",
-      src: ""
+      src: "/services/design"
     },
     {
       name: "SEO: поднимитесь на вершину поисковых результатов",
-      src: ""
+      src: "/services/seo"
     },
     {
       name: "Мобильные приложения на заказ: современные технологии и непрерывная поддержка",
-      src: ""
+      src: "/services/mobile"
     },
     {
       name: "Сопровождение сайтов: поддержим ваш сайт в актуальном состоянии",
-      src: ""
+      src: "/services/service"
     },
     {
       name: "Оптимизация сайтов: повысим ваш рейтинг и видимость вашего проекта",
-      src: ""
+      src: "/services/optimization"
     }
   ];
 
@@ -36,7 +36,7 @@ const Services = () => {
       <Divider number='02' text='Услуги' />
       <div className="services__links">
         {servicesData.map((service, index) => (
-          <Link key={index} className="services__links-link" to="#">{service.name}</Link>
+          <Link key={index} className="services__links-link" to={service.src}>{service.name}</Link>
         ))}
       </div>
     </div>
