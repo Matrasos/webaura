@@ -1,6 +1,8 @@
-const Card = ({ src, title, chips }) => {
+import { Link } from "react-router-dom";
+
+const Card = ({ link, src, title, chips }) => {
   return (
-    <div className="cases__grid-card">
+    <Link to={link} className="cases__grid-card">
       <img src={src} alt="AuraWeb case" />
       <h3>{title}</h3>
       <div className="cases__grid-card-chips">
@@ -8,7 +10,7 @@ const Card = ({ src, title, chips }) => {
           <div key={index}>{chip}</div>
         ))}
       </div>
-    </div>
+    </Link>
   );
 }
 
