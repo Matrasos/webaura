@@ -5,7 +5,7 @@ import Team from "./Team/Team";
 import About from "./About/About";
 import Reviews from "./Reviews/Reviews";
 import Technologies from "./Technologies/Technologies";
-import Blog from "./Blog/Blog";
+import Posts from "./Posts/Posts";
 import Hero from "./Hero/Hero";
 import Footer from "./Footer/Footer";
 
@@ -23,7 +23,7 @@ const Home = () => {
           <About />
           <Reviews />
           <Technologies />
-          <Blog />
+          <Posts />
         </div>
       </main>
       <Footer />

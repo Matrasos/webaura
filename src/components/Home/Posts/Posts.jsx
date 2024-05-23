@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Divider from "../Divider/Divider";
 import Post from "./Post/Post";
 
-const Blog = () => {
+const Posts = () => {
   let posts = [
     {
       src: "/src/assets/blog/post-1.png",
@@ -46,4 +46,4 @@ const Blog = () => {
   );
 }
 
-export default Blog;
+export default Posts;
