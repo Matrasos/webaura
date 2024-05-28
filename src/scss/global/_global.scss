@@ -68,3 +68,58 @@ body.lock {
     }
   }
 }
+
+.mailing {
+  &__form {
+    display: flex;
+    align-items: end;
+    gap: 50px;
+  }
+
+  &__form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h3 {
+      font-weight: 500;
+      font-size: 24px;
+      color: $black;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      color: #575757;
+    }
+
+    input {
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #000;
+      font-weight: 500;
+      font-size: 20px;
+      color: #717171;
+      padding: 5px 0;
+
+      &::placeholder {
+        color: #717171;
+      }
+    }
+  }
+
+  button {
+    font-weight: 500;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background-color: $blue;
+    min-width: 83px;
+    min-height: 83px;
+    color: $white;
+  }
+}
