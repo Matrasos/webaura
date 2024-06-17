@@ -4,6 +4,7 @@ import Home from './components/Home/Home'
 import Case from 'components/Case/Case'
 import Service from 'components/Service/Service'
 import Blog from 'components/Blog/Blog'
+import Article from 'components/Article/Article'
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/blog' element={<Blog />} />
-        <Route path='/:article' element={<Blog />} />
+        <Route path='/blog/:article' element={<Article />} />
         <Route path='/services/:service' element={<Service />} />
       </Routes>
     </>

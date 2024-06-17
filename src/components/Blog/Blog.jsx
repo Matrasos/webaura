@@ -60,7 +60,7 @@ const Blog = () => {
       <div className="main">
         <Divider number='01' text='Блог' />
         <div className="blog-page__news">
-          <Link to="" className="big-post">
+          <Link to="/blog/1" className="big-post">
             <img src="/src/assets/blog/posts/big-post.png" alt="blog picture" />
             <p>01.05.2024</p>
             <h4>Вперед в будущее веб-разработки: Горячие тренды и инновации, которые изменят игру</h4>
