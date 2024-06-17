@@ -16,35 +16,105 @@ const Home = () => {
 
   const caseData = {
     'mindray': {
-      title: 'Mindray 23',
-      chips: ['WINTER 23', '2023'],
-      description: '<span>WINTER 23</span> - магазин зимней одежды...',
-      tasks: 'Увеличить узнаваемость бренда...',
+      title: 'Mindray Resona I9',
+      chips: [1, 2, 3],
+      description: '...',
+      tasks: '...',
       solutions: [
-        'Разработана инновационная механика...',
-        'При регистрации чека на games.5ka.ru...'
+        '...',
+        '...'
       ],
       results: [
-        'Компания WINTER 23 успешно осуществила...',
-        'Регистрация чека на платформе games.5ka.ru...'
+        '...',
+        '...'
       ]
     },
     'winter': {
-      title: 'Winter 23',
-      chips: ['WINTER 23', '2023'],
-      description: '<span>WINTER 23</span> - магазин зимней одежды...',
-      tasks: 'Увеличить узнаваемость бренда...',
+      title: 'WINTER 23’',
+      chips: [4, 5],
+      description: '...',
+      tasks: '...',
       solutions: [
-        'Разработана инновационная механика...',
-        'При регистрации чека на games.5ka.ru...'
+        '...',
+        '...'
       ],
       results: [
-        'Компания WINTER 23 успешно осуществила...',
-        'Регистрация чека на платформе games.5ka.ru...'
+        '...',
+        '...'
       ]
     },
-    // другие кейсы
+    'autowise': {
+      title: 'Autowise Avenue',
+      chips: [6, 7, 8, 9],
+      description: '...',
+      tasks: '...',
+      solutions: [
+        '...',
+        '...'
+      ],
+      results: [
+        '...',
+        '...'
+      ]
+    },
+    'coffeo': {
+      title: 'Coffeo',
+      chips: [6, 7, 8, 9],
+      description: '...',
+      tasks: '...',
+      solutions: [
+        '...',
+        '...'
+      ],
+      results: [
+        '...',
+        '...'
+      ]
+    },
+    'cozy': {
+      title: 'Cozy Home',
+      chips: [6, 7, 8, 9],
+      description: '...',
+      tasks: '...',
+      solutions: [
+        '...',
+        '...'
+      ],
+      results: [
+        '...',
+        '...'
+      ]
+    },
+    'green': {
+      title: 'Green Grove',
+      chips: [6, 7, 8, 9],
+      description: '...',
+      tasks: '...',
+      solutions: [
+        '...',
+        '...'
+      ],
+      results: [
+        '...',
+        '...'
+      ]
+    },
+    'arthub': {
+      title: 'Художественная школа ArtHub',
+      chips: [6, 7, 8, 9],
+      description: '...',
+      tasks: '...',
+      solutions: [
+        '...',
+        '...'
+      ],
+      results: [
+        '...',
+        '...'
+      ]
+    },
   };
+
 
   return (
     <div className="home wrapper">
