@@ -4,7 +4,7 @@ import AboutExp from "./AboutExp";
 const About = () => {
   return (
     <>
-      <div className="about">
+      <div id="about" className="about">
         <Divider number='04' text='О НАС' />
         <div className="about__row">
           <div className="about__row-text">

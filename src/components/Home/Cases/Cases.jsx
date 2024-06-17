@@ -11,7 +11,7 @@ const Cases = ({ selectedCase, setSelectedCase, caseData }) => {
   }));
 
   return (
-    <section className="cases">
+    <section id="cases" className="cases">
       <Divider number='01' text='Кейсы' />
       <div className="cases__grid">
         {cardData.map((card, index) => (

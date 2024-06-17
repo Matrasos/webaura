@@ -32,7 +32,7 @@ const Services = () => {
 
 
   return (
-    <div className="services">
+    <div className="services" id="services">
       <Divider number='02' text='Услуги' />
       <div className="services__links">
         {servicesData.map((service, index) => (

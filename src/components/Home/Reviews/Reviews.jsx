@@ -32,7 +32,7 @@ const Reviews = () => {
 
 
   return (
-    <div className="reviews">
+    <div id='reviews' className="reviews">
       <Divider number='05' text='Отзывы' />
       <div className='reviews-container'>
         <div className="reviews__quote">

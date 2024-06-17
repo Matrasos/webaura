@@ -18,7 +18,7 @@ const Team = () => {
   ];
 
   return (
-    <div className="team">
+    <div className="team" id="team">
       <Divider number='03' text='КОМАНДА' />
       <div className="team__info">
         <div className="team__info-persons">

@@ -4,18 +4,23 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
   const links = [
-    { name: "Кейсы", anchor: "#cases" },
-    { name: "Услуги", anchor: "#services" },
-    { name: "Команда", anchor: "#team" },
-    { name: "О нас", anchor: "#about" },
-    { name: "Блог", anchor: "blog" },
-    { name: "Отзывы", anchor: "#reviews" }
+    { name: "Кейсы", anchor: "/#cases" },
+    { name: "Услуги", anchor: "/#services" },
+    { name: "Команда", anchor: "/#team" },
+    { name: "О нас", anchor: "/#about" },
+    { name: "Блог", anchor: "/blog" },
+    { name: "Отзывы", anchor: "/#reviews" }
   ];
 
   const handleBurgerClick = () => {
     setIsActive(!isActive);
 
     document.querySelector('body').classList.toggle('lock')
+  };
+
+  const handleNavLinkClick = () => {
+    setIsActive(false);
+    document.querySelector('body').classList.remove('lock');
   };
 
   useEffect(() => {
@@ -39,11 +44,11 @@ const Header = () => {
         <img src="/src/assets/logo.svg" alt="WebAura logo" />
       </Link>
       <nav className="header__nav">
-        <Link to="#cases"><li>Кейсы</li></Link>
-        <Link to="#services"><li>Услуги</li></Link>
-        <Link to="#team"><li>Команда</li></Link>
-        <Link to="#about"><li>О нас</li></Link>
-        <Link to="#reviews"><li>Отзывы</li></Link>
+        <a onClick={() => handleNavLinkClick()} href="#cases"><li>Кейсы</li></a>
+        <a onClick={() => handleNavLinkClick()} href="#services"><li>Услуги</li></a>
+        <a onClick={() => handleNavLinkClick()} href="#team"><li>Команда</li></a>
+        <a onClick={() => handleNavLinkClick()} href="#about"><li>О нас</li></a>
+        <a onClick={() => handleNavLinkClick()} href="#reviews"><li>Отзывы</li></a>
       </nav>
       <div className="header__contact">
         <Link target="_blank" to="https://api.whatsapp.com/send/?phone=77009807823&text&type=phone_number&app_absent=0">
@@ -63,10 +68,10 @@ const Header = () => {
       <div className={`header__menu ${isActive ? 'active' : ''}`}>
         <div className="header__menu-nav">
           {links.map((link, index) => (
-            <Link className="header__menu-link" key={index} to={`${link.anchor}`}>
+            <a onClick={() => handleNavLinkClick()} className="header__menu-link" key={index} href={`${link.anchor}`}>
               <span>{link.name}</span>
               <div className="header__divider"></div>
-            </Link>
+            </a>
           ))}
         </div>
         <div className="header__menu-info">

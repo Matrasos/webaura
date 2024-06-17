@@ -5,12 +5,12 @@ const HeaderBlog = () => {
   const [isActive, setIsActive] = useState(false);
 
   const links = [
-    { name: "Кейсы", anchor: "#cases" },
-    { name: "Услуги", anchor: "#services" },
-    { name: "Команда", anchor: "#team" },
-    { name: "О нас", anchor: "#about" },
-    { name: "Блог", anchor: "blog" },
-    { name: "Отзывы", anchor: "#reviews" }
+    { name: "Кейсы", anchor: "/#cases" },
+    { name: "Услуги", anchor: "/#services" },
+    { name: "Команда", anchor: "/#team" },
+    { name: "О нас", anchor: "/#about" },
+    { name: "Блог", anchor: "/blog" },
+    { name: "Отзывы", anchor: "/#reviews" }
   ];
 
   const handleBurgerClick = () => {
@@ -43,10 +43,10 @@ const HeaderBlog = () => {
         <div className={`header__menu ${isActive ? 'active' : ''}`}>
           <div className="header__menu-nav">
             {links.map((link, index) => (
-              <Link className="header__menu-link" key={index} to={`${link.anchor}`}>
+              <a className="header__menu-link" key={index} href={`${link.anchor}`}>
                 <span>{link.name}</span>
                 <div className="header__divider"></div>
-              </Link>
+              </a>
             ))}
           </div>
           <div className="header__menu-info">
