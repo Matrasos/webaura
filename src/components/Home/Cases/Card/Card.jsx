@@ -1,16 +1,14 @@
-import { Link } from "react-router-dom";
-
-const Card = ({ link, src, title, chips }) => {
+const Card = ({ card, onSelect }) => {
   return (
-    <Link to={link} className="cases__grid-card">
-      <img src={src} alt="AuraWeb case" />
-      <h3>{title}</h3>
+    <div onClick={onSelect} className="cases__grid-card">
+      <img src={card.src} alt={card.title} />
+      <h3>{card.title}</h3>
       <div className="cases__grid-card-chips">
-        {chips.map((chip, index) => (
+        {card.chips.map((chip, index) => (
           <div key={index}>{chip}</div>
         ))}
       </div>
-    </Link>
+    </div>
   );
 }
 
