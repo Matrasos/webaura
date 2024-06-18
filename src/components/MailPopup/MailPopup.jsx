@@ -1,9 +1,18 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2';
+import { sendFormTelegram } from "/src/api/telegram";
 
 const MailPopup = ({ isOpen, onClose }) => {
 
   const [checkedLabels, setCheckedLabels] = useState([]);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    budget: "",
+    email: "",
+    message: "",
+  });
 
   const handleCheckboxChange = (e) => {
     const { id } = e.target;
@@ -11,6 +20,59 @@ const MailPopup = ({ isOpen, onClose }) => {
       setCheckedLabels((prevLabels) => [...prevLabels, id]);
     } else {
       setCheckedLabels((prevLabels) => prevLabels.filter((label) => label !== id));
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+
+  const clearForm = () => {
+    setFormData({
+      name: "",
+      phone: "",
+      budget: "",
+      email: "",
+      message: "",
+    });
+    setCheckedLabels([]);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const message = `
+        Новая заявка на сайте:
+        Имя: ${formData.name}
+        Телефон: ${formData.phone}
+        Бюджет: ${formData.budget}
+        Почта: ${formData.email}
+        Сообщение: ${formData.message}
+        Интересы: ${checkedLabels.join(", ")}
+      `;
+
+      await sendFormTelegram(message);
+      Swal.fire({
+        title: "Успех!",
+        text: "Форма успешно отправлена!",
+        icon: "success",
+        confirmButtonText: "Закрыть",
+      }).then(() => {
+        onClose(); // Close the popup after successful submission
+        clearForm();
+      });
+    } catch (error) {
+      console.error("Ошибка при отправке формы:", error);
+      Swal.fire({
+        title: "Ошибка!",
+        text: "Не удалось отправить форму. Попробуйте еще раз позже.",
+        icon: "error",
+        confirmButtonText: "Закрыть",
+      });
     }
   };
 
@@ -33,38 +95,81 @@ const MailPopup = ({ isOpen, onClose }) => {
         </button>
       </div>
 
-      <form>
-
+      <form onSubmit={handleSubmit}>
         <div className="text">
-          <h2>Расскажите <br /> о вашем проекте</h2>
+          <h2>Расскажите о вашем проекте</h2>
           <p>Кратко опишите свою задачу, а мы свяжемся с вами в ближайшее время.</p>
         </div>
 
         <div className="grid">
           <div className="form-inputs">
-            <input placeholder="Ваше имя *" type="text" />
-            <input placeholder="Телефон *" type="text" />
-            <input placeholder="Бюджет *" type="text" />
-            <input placeholder="Почта *" type="text" />
-            <input placeholder="Сообщение *" type="text" className="full" />
+            <input
+              placeholder="Ваше имя *"
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              placeholder="Телефон *"
+              type="text"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
+            <input
+              placeholder="Бюджет *"
+              type="text"
+              name="budget"
+              value={formData.budget}
+              onChange={handleChange}
+              required
+            />
+            <input
+              placeholder="Почта *"
+              type="text"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <input
+              placeholder="Сообщение *"
+              type="text"
+              className="full"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
           </div>
           <p className="spec">Опишите вашу задачу. В чём она заключается? Сроки?</p>
 
-
           <div className="chips">
-            <label htmlFor="landing" className={checkedLabels.includes('landing') ? 'checked' : ''}>
-              <input type="checkbox" name="landing" id="landing" onChange={handleCheckboxChange} />
+            <label htmlFor="landing" className={checkedLabels.includes("landing") ? "checked" : ""}>
+              <input
+                type="checkbox"
+                name="landing"
+                id="landing"
+                onChange={handleCheckboxChange}
+              />
               лэндинг
             </label>
-            <label htmlFor="mobile" className={checkedLabels.includes('mobile') ? 'checked' : ''}>
-              <input type="checkbox" name="mobile" id="mobile" onChange={handleCheckboxChange} />
+            <label htmlFor="mobile" className={checkedLabels.includes("mobile") ? "checked" : ""}>
+              <input
+                type="checkbox"
+                name="mobile"
+                id="mobile"
+                onChange={handleCheckboxChange}
+              />
               мобильное приложение
             </label>
           </div>
 
-          <button>Начать работу</button>
+          <button type="submit">Начать работу</button>
         </div>
-
       </form>
 
     </div>
