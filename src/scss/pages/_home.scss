@@ -630,6 +630,8 @@
   }
 
   .services {
+    max-width: none;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: end;
