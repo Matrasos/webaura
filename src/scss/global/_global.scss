@@ -430,8 +430,147 @@ body.lock {
   transition: 0.5s ease;
   background-color: $white;
   z-index: 10000;
+  padding: 50px;
+  overflow-y: auto;
+
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-close {
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
 
   &.open {
     top: 0;
+  }
+
+  form {
+    margin-top: 100px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+
+    .text {
+      h2 {
+        font-weight: 500;
+        font-size: 48px;
+
+        @media screen and (max-width: 475px) {
+          font-size: 32px;
+        }
+      }
+      p {
+        font-weight: 500;
+        font-size: 24px;
+        margin-top: 20px;
+
+        @media screen and (max-width: 475px) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .grid {
+      flex: 1 1 60%;
+
+      p.spec {
+        margin-top: 10px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #484848;
+      }
+    }
+
+    & .form-inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+
+      @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      input {
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid #656565;
+        padding: 8px 0;
+        font-weight: 500;
+        font-size: 24px;
+        color: $text;
+
+        @media screen and (max-width: 768px) {
+          font-size: 20px;
+        }
+        @media screen and (max-width: 475px) {
+          font-size: 16px;
+        }
+
+        &::placeholder {
+          color: #d8d8d8;
+        }
+
+        &.full {
+          grid-column: span 2;
+        }
+      }
+    }
+
+    .chips {
+      margin: 30px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      label {
+        cursor: pointer;
+        background-color: transparent;
+        color: $black;
+        border: 1px solid $black;
+        border-radius: 50px;
+        padding: 8px 20px;
+
+        &.checked {
+          background-color: $blue;
+          border-color: $blue;
+          color: $white;
+        }
+      }
+
+      input {
+        display: none;
+      }
+    }
+
+    button {
+      background-color: $blue;
+      color: $white;
+      padding: 10px 40px;
+      font-weight: 600;
+      font-size: 24px;
+      width: 100%;
+      border: none;
+      outline: none;
+      border-radius: 30px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 18px;
+      }
+    }
   }
 }

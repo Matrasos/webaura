@@ -41,13 +41,21 @@ const Header = () => {
         document.querySelector('body').classList.remove('lock');
       }
     };
-
     window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, [isActive]);
+
+  useEffect(() => {
+
+
+    // Чистим эффект: удаляем класс при размонтировании компонента
+    return () => {
+      document.body.classList.remove('lock');
+    };
+  }, [isMailPopupOpen]); // Зависимость от isMailPopupOpen
 
   return (
     <header className="header">
