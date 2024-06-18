@@ -41,7 +41,7 @@ const Header = () => {
   return (
     <header className="header">
       <Link to="/" className="header__logo">
-        <img src="./../../../../src/assets/logo.svg" alt="WebAura logo" />
+        <img src="http://n77816ey.beget.tech/assets/logo.svg" alt="WebAura logo" />
       </Link>
       <nav className="header__nav">
         <a onClick={() => handleNavLinkClick()} href="#cases"><li>Кейсы</li></a>

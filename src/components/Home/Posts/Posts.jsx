@@ -5,26 +5,26 @@ import Post from "./Post/Post";
 const Posts = () => {
   let posts = [
     {
-      src: "/src/assets/blog/post-1.png",
+      src: "http://n77816ey.beget.tech/assets/blog/post-1.png",
       data: "01.05.2024",
       title: "Погружение в последние тенденции в веб-дизайне: Цветовые палитры, шрифты и анимация",
-      avatar: "/src/assets/blog/avatar-1.png",
+      avatar: "http://n77816ey.beget.tech/assets/blog/avatar-1.png",
       name: "Мукашева Айнур",
       position: "главный редактор"
     },
     {
-      src: "/src/assets/blog/post-1.png",
+      src: "http://n77816ey.beget.tech/assets/blog/post-1.png",
       data: "01.05.2024",
       title: "Погружение в последние тенденции в веб-дизайне: Цветовые палитры, шрифты и анимация",
-      avatar: "/src/assets/blog/avatar-1.png",
+      avatar: "http://n77816ey.beget.tech/assets/blog/avatar-1.png",
       name: "Мукашева Айнур",
       position: "главный редактор"
     },
     {
-      src: "/src/assets/blog/post-1.png",
+      src: "http://n77816ey.beget.tech/assets/blog/post-1.png",
       data: "01.05.2024",
       title: "Погружение в последние тенденции в веб-дизайне: Цветовые палитры, шрифты и анимация",
-      avatar: "/src/assets/blog/avatar-1.png",
+      avatar: "http://n77816ey.beget.tech/assets/blog/avatar-1.png",
       name: "Мукашева Айнур",
       position: "главный редактор"
     },

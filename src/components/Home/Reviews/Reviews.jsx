@@ -12,19 +12,19 @@ const Reviews = () => {
   const slides = [
     {
       id: 1,
-      image: '/src/assets/reviews/1.png',
+      image: 'http://n77816ey.beget.tech/assets/reviews/1.png',
       name: 'John Doe',
       description: '“Я не могу достаточно выразить свою благодарность команде WebAura за их профессионализм, творчество и усердную работу. Работая с ними, я получил идеальное сочетание качественного дизайна, инновационных решений и внимательного отношения к деталям.”',
     },
     {
       id: 2,
-      image: '/src/assets/reviews/1.png',
+      image: 'http://n77816ey.beget.tech/assets/reviews/1.png',
       name: 'Jane Smith',
       description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       id: 3,
-      image: '/src/assets/reviews/1.png',
+      image: 'http://n77816ey.beget.tech/assets/reviews/1.png',
       name: 'Alice Johnson',
       description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     },

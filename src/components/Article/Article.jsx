@@ -8,7 +8,7 @@ const Article = () => {
         <h1>Вперед в будущее веб-разработки: горячие тренды и инновации, которые изменят игру</h1>
         <p className="date">18.02.2024</p>
         <div className="image">
-          <img src="/src/assets/blog/post-1.png" alt="post" />
+          <img src="http://n77816ey.beget.tech/assets/blog/post-1.png" alt="post" />
         </div>
         <div>
           <h2 className="subtitle">Цветовые палитры</h2>
@@ -28,8 +28,8 @@ const Article = () => {
           Роскошные нейтральные оттенки идеально подходят для создания сайтов модных брендов, ресторанов, гостиничных комплексов, а также других премиальных и эксклюзивных брендов. Они помогают подчеркнуть утонченный вкус и высокое качество представляемых продуктов или услуг.
         </p>
         <div className="gallery">
-          <img src="/src/assets/blog/posts/color1.png" alt="" />
-          <img src="/src/assets/blog/posts/color2.png" alt="" />
+          <img src="http://n77816ey.beget.tech/assets/blog/posts/color1.png" alt="" />
+          <img src="http://n77816ey.beget.tech/assets/blog/posts/color2.png" alt="" />
         </div>
 
         <h2 className="subtitle">2. Цифровой нуар </h2>
@@ -43,8 +43,8 @@ const Article = () => {
           Комбинируйте цифровой нуар с яркими акцентами или металлическими оттенками, чтобы создать контраст и добавить динамику к дизайну. Этот оттенок также отлично сочетается с нейтральными цветами, такими как серый, белый или бежевый, создавая современный и элегантный контраст.
         </p>
         <div className="gallery">
-          <img src="/src/assets/blog/posts/color3.png" alt="" />
-          <img src="/src/assets/blog/posts/color4.png" alt="" />
+          <img src="http://n77816ey.beget.tech/assets/blog/posts/color3.png" alt="" />
+          <img src="http://n77816ey.beget.tech/assets/blog/posts/color4.png" alt="" />
         </div>
 
         <h2 className="subtitle">3. Океанические волны</h2>
@@ -58,7 +58,7 @@ const Article = () => {
           Комбинировать оттенок "Океанические волны" можно с нейтральными цветами, такими как белый или светло-серый, чтобы подчеркнуть его свежесть и гармонию.
         </p>
         <div className="gallery-special">
-          <img src="/src/assets/blog/posts/color5.png" alt="" />
+          <img src="http://n77816ey.beget.tech/assets/blog/posts/color5.png" alt="" />
         </div>
       </div>
     </div>

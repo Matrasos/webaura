@@ -5,13 +5,13 @@ const Team = () => {
   const teamData = [
     {
       name: "Мукашева Нура Марленовна",
-      src: "/src/assets/team/nura.png",
+      src: "http://n77816ey.beget.tech/assets/team/nura.png",
       description: "Дизайнер, SEO, копирайтер",
       link: "https://vk.com/amuuuuuuuuuuuuuuuuuk"
     },
     {
       name: "Аксаков Максим Андреевич",
-      src: "/src/assets/team/maksim.png",
+      src: "http://n77816ey.beget.tech/assets/team/maksim.png",
       description: "Back-end, front-end",
       link: "https://vk.com/amuuuuuuuuuuuuuuuuuk"
     }

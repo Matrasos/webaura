@@ -4,7 +4,7 @@ import Card from "./Card/Card";
 const Cases = ({ selectedCase, setSelectedCase, caseData }) => {
   const cardData = Object.keys(caseData).map(key => ({
     link: `/cases/${key}`,
-    src: `/src/assets/cases/${key}.png`,
+    src: `http://n77816ey.beget.tech/assets/cases/${key}.png`,
     title: caseData[key].title,
     chips: caseData[key].chips,
     id: key
