@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 const Post = ({ src, data, title, avatar, name, position, }) => {
   return (
-    <div className="blog__post">
+    <Link to='/blog/1' className="blog__post">
       <img className="post-image" src={src} alt="AuraWeb post" />
       <p className="blog__post-data">{data}</p>
       <h4>{title}</h4>
@@ -11,7 +13,7 @@ const Post = ({ src, data, title, avatar, name, position, }) => {
           <p>{position}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

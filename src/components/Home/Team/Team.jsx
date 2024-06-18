@@ -7,13 +7,13 @@ const Team = () => {
       name: "Мукашева Нура Марленовна",
       src: "/src/assets/team/nura.png",
       description: "Дизайнер, SEO, копирайтер",
-      link: "#"
+      link: "https://vk.com/amuuuuuuuuuuuuuuuuuk"
     },
     {
       name: "Аксаков Максим Андреевич",
       src: "/src/assets/team/maksim.png",
       description: "Back-end, front-end",
-      link: "#"
+      link: "https://vk.com/amuuuuuuuuuuuuuuuuuk"
     }
   ];
 
